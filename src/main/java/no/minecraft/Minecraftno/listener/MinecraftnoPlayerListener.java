@@ -338,7 +338,7 @@ public class MinecraftnoPlayerListener implements Listener {
     				event.setCancelled(true);
     				return;
     		}
-		}
+	}
 
         if (!player.isSneaking() && event.getAction() != Action.PHYSICAL && wcfg.allowUseCompass) {
             if (itemInHand.getType() == Material.COMPASS) {
