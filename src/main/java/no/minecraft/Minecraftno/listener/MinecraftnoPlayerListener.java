@@ -334,11 +334,11 @@ public class MinecraftnoPlayerListener implements Listener {
         
         //Prevents beds to blow.
     	if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-    		if (event.getClickedBlock().toString().toLowerCase().contains("bed")) {
-    				event.setCancelled(true);
-    				return;
-    		}
-	}
+            if (block.getMaterial() == Material.BED) {
+    		    event.setCancelled(true);
+    			return;
+    	     }
+        }
 
         if (!player.isSneaking() && event.getAction() != Action.PHYSICAL && wcfg.allowUseCompass) {
             if (itemInHand.getType() == Material.COMPASS) {
