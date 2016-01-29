@@ -334,9 +334,9 @@ public class MinecraftnoPlayerListener implements Listener {
         
         //Prevents beds to blow.
     	if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            if (block.getMaterial() == Material.BED) {
-    		    event.setCancelled(true);
-    			return;
+            if (block.getType() == Material.BED || block.getType() == Material.BED_BLOCK) {
+                event.setCancelled(true);
+                return;
     	     }
         }
 
